@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="main_frame" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #00AD64;" stylesheets="@../css/customStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Main_Controller">
+   <left>
+        <VBox fx:id="menu" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" style="-fx-background-color: #6A6A6A;" BorderPane.alignment="CENTER_LEFT">
+            <children>
+                <Pane prefHeight="80.0" prefWidth="250.0" style="-fx-background-color: #535151;">
+                    <children>
+                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="10.0" layoutY="8.0" smooth="false">
+                            <image>
+                                <Image url="@../assets/brand_icon_s_symbol_filled_124px_1.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="66.0" layoutY="40.0" style="-fx-text-fill: #fff;" text="AMIAN">
+                     <font>
+                        <Font name="Eras Bold ITC" size="24.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+                <Button fx:id="dashboard_tab" alignment="BASELINE_LEFT" graphicTextGap="16.0" maxWidth="250.0" minWidth="250.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="250.0" styleClass="menu-button" text="Dashboard" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets top="4.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/button_image_speedometer_124px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+               <padding>
+                  <Insets left="16.0" />
+               </padding>
+                </Button>
+                <Button fx:id="reservations_tab" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="90.0" maxWidth="250.0" minWidth="250.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="250.0" styleClass="menu-button" text="Reservations" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets top="4.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/button_image_calendar_124px_1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="16.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+                <Button fx:id="new_property_tab" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="144.0" maxWidth="250.0" minWidth="250.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="250.0" styleClass="menu-button" text="Add new Property" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets top="4.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/button_image_plussign_124px_4.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="16.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+                <Button fx:id="settings_tab" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="198.0" maxWidth="250.0" minWidth="250.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="250.0" styleClass="menu-button" text="Settings" textFill="WHITE" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets top="4.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="16.0" />
+                    </padding>
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/button_image_settings_124px_3.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+            </children>
+        </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="stage_background" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #EFEFEF99;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding></StackPane>
+   </center>
+</BorderPane>

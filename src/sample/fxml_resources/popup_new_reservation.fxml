@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="popup_window" alignment="TOP_CENTER" prefHeight="699.0" prefWidth="850.0" stylesheets="@../css/customStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane alignment="CENTER" style="-fx-background-color: #00D47B;">
+         <children>
+            <Label text="New Reservation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="30.0" radius="17.0" width="40.0" />
+         </effect>
+      </FlowPane>
+      <ScrollPane fitToWidth="true" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;">
+         <content>
+            <VBox alignment="TOP_CENTER" prefWidth="800.0" spacing="10.0">
+               <children>
+                  <GridPane alignment="CENTER_LEFT" hgap="48.0" style="-fx-background-color: #EEF8F4; -fx-background-radius: 20;" vgap="24.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" style="-fx-border-width: 0 0 1 0; -fx-border-color: #00D47B;" GridPane.columnSpan="4" GridPane.valignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" text="Reservation Info" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="24.0" right="24.0" />
+                           </GridPane.margin>
+                        </FlowPane>
+                        <VBox GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Room number" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Room type" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField editable="false">
+                                 <VBox.margin>
+                                    <Insets right="36.0" top="8.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label text="Check-In" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label text="Check-Out" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Arrival time" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTimePicker />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Departure time" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTimePicker />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="455.0" layoutY="89.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Provider" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Price per night" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField>
+                                 <VBox.margin>
+                                    <Insets right="116.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="DARKGRAY" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane alignment="CENTER" style="-fx-background-color: #EEF8F4; -fx-background-radius: 20;">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="340.79998779296875" minWidth="10.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="389.20001220703125" minWidth="10.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" style="-fx-border-width: 0 0 1 0; -fx-border-color: #00D47B;" GridPane.columnSpan="3" GridPane.valignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" text="Guest Info" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="64.0" left="24.0" right="24.0" />
+                           </GridPane.margin>
+                        </FlowPane>
+                        <VBox GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Full Name" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField maxWidth="-Infinity" prefWidth="240.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label text="No. of Guests" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Address" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField maxWidth="-Infinity" prefWidth="240.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="264.0" layoutY="88.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Email" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField maxWidth="-Infinity" prefWidth="240.0" />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="367.0" layoutY="88.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="Phone" textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField maxWidth="-Infinity" prefWidth="160.0" />
+                           </children>
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="DARKGRAY" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="48.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox prefHeight="180.0" styleClass="new-reservation-popup-card" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" style="-fx-border-width: 0 0 1 0; -fx-border-color: #00D47B;">
+                           <children>
+                              <Label alignment="CENTER" text="Notes . . ." textFill="DIMGRAY">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="16.0" left="24.0" right="24.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                        <JFXTextArea focusColor="#41f253" focusTraversable="false" labelFloat="true" pickOnBounds="false" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="48.0" right="48.0" />
+                           </VBox.margin>
+                        </JFXTextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </VBox>
+                  <GridPane alignment="CENTER" style="-fx-background-color: #EEF8F4; -fx-background-radius: 20;">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <effect>
+                        <DropShadow color="DARKGRAY" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <children>
+                        <Button fx:id="cancel_button" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #ff2b67; -fx-background-radius: 20;" text="Cancel" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="32.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="confirm_button" mnemonicParsing="false" prefHeight="32.0" prefWidth="170.0" style="-fx-background-color: #00D47B; -fx-background-radius: 20;" text="Add Reservation" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="32.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </content>
+         <opaqueInsets>
+            <Insets top="2.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ScrollPane>
+   </children>
+</VBox>

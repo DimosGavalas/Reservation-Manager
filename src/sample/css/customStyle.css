@@ -1,0 +1,49 @@
+{
+menu-dark-grey: #535151;
+menu-medium-grey: #5E5D5D88;
+menu-light-grey: #6A6A6A;
+menu-text-white: #FFFFFF;
+}
+
+@font-face {
+    src: url("/sample/assets/fonts/Exo_2/Exo2-Bold.ttf");
+}
+
+.root-font{
+    -fx-font-family: "Exo 2";
+}
+
+.title-panel{
+
+}
+
+.menu-button{
+    -fx-background-color: menu-medium-grey;
+	-fx-text-fill: 'white';
+}
+
+.menu-button:hover{
+    -fx-background-color: menu-dark-grey;
+}
+
+/*.menu-button:pressed{
+    -fx-background-color: 'green';
+}*/
+
+/*.menu-button:focused{
+    -fx-background-color: menu-dark-grey;
+}*/
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/****** New Reservation popup ********************************************************/
+
+.new-reservation-popup-card {
+    -fx-background-color: "#EEF8F4";
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, #a9a9a9, 10, 0, 0, 0);
+}
+/*************************************************************************************/
+
